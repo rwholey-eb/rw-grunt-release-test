@@ -43,7 +43,17 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.config.set('gitpush')
+    grunt.config.set('gitpush', {
+        task: {
+            options: {
+                message: 'pushing dist..',
+                force: true
+            },
+        },
+        files: {
+            src: [path.resolve(__dirname, './dist')]
+        }
+    })
 
     grunt.registerTask('publish', 'Publish package to reggie', function() {
 
