@@ -1,6 +1,6 @@
 npm cache clean
 cp .gitignore gitignore
-cat .gitignore | awk '!/**remove_for_build**/' > .gitignore
+cat .gitignore | awk '!/remove_for_build/' > .gitignore
 echo gitignore >> .gitignore
 
 git add -f ./dist
