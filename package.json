@@ -1,6 +1,6 @@
 {
   "name": "rw-grunt-release-test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,6 @@
     "grunt": "^1.0.1",
     "grunt-release": "^0.14.0",
     "grunt-shell": "^2.0.0",
-    "grunt-tasks": "^1.0.0",
     "load-grunt-tasks": "^3.5.2",
     "shelljs": "^0.7.4"
   }
