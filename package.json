@@ -19,6 +19,7 @@
   "homepage": "https://github.com/rwholey-eb/rw-grunt-release-test#readme",
   "devDependencies": {
     "grunt": "^1.0.1",
+    "grunt-git": "^1.0.0",
     "grunt-release": "^0.14.0",
     "grunt-shell": "^2.0.0",
     "load-grunt-tasks": "^3.5.2",
