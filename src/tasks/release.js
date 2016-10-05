@@ -68,7 +68,8 @@ module.exports = function(grunt) {
         grunt.task.run(bumpTask, 'publish');
     });
 
-    grunt.reigsterTask('add-dist', function() {
-        grunt.task.run('grunt-git')
+    grunt.registerTask('add-dist', 'Add dist to repo',function() {
+        grunt.task.run('gitadd');
+        grunt.task.run('gitcommit');
     });
 };
