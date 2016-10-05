@@ -43,6 +43,8 @@ module.exports = function(grunt) {
         }
     });
 
+    grunt.config.set('gitpush')
+
     grunt.registerTask('publish', 'Publish package to reggie', function() {
 
         // var pkg = grunt.file.readJSON('package.json'),
@@ -72,5 +74,6 @@ module.exports = function(grunt) {
     grunt.registerTask('add-dist', 'Add dist to repo',function() {
         grunt.task.run('gitadd');
         grunt.task.run('gitcommit');
+        grunt.task.run('gitpush')
     });
 };
