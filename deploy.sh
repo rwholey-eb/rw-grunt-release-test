@@ -30,7 +30,7 @@ overridden by environment variables. Any environment variables are overridden
 by values set in a '.env' file (if it exists), and in turn by those set in a
 file specified by the '--config-file' option."
 
-GIT_DEPLOY_DIR="dist/"
+GIT_DEPLOY_DIR="src/"
 GIT_DEPLOY_BRACH="master"
 GIT_DEPLOY_REPO="https://github.com/rwholey-eb/rw-grunt-release-test"
 parse_args() {
@@ -74,7 +74,7 @@ parse_args() {
 
 	# Source directory & target branch.
 	deploy_directory=${GIT_DEPLOY_DIR:-dist}
-	deploy_branch=${GIT_DEPLOY_BRANCH:-master}
+	deploy_branch=${GIT_DEPLOY_BRANCH:-ryan}
 
 	#if no user identity is already set in the current git environment, use this:
 	default_username=${GIT_DEPLOY_USERNAME:-deploy.sh}
