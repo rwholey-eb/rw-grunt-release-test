@@ -5,9 +5,9 @@ rm .ignoretemp
 echo .original >> .gitignore
 git rm --cached -q -r .
 
-#git add dist
-#git commit -m "pushing dist"
-#git push origin master
+git add dist
+git commit -m "pushing dist"
+git push origin master
 
 git status
 
