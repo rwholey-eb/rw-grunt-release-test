@@ -2,6 +2,7 @@ module.exports = function(grunt) {
     'use strict';
 
     var shell = require('shelljs');
+    var path = require('path');
 
     grunt.renameTask('release', 'bump-version');
     grunt.config.set('bump-version', {
@@ -26,7 +27,7 @@ module.exports = function(grunt) {
             }
         },
         files: {
-            src: ['./dist']
+            src: [path.resolve(__dirname, './dist')]
         }
     });
 
@@ -38,7 +39,7 @@ module.exports = function(grunt) {
             }
         },
         files: {
-            src: ['./dist']
+            src: [path.resolve(__dirname, './dist')]
         }
     });
 
