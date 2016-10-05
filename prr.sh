@@ -5,9 +5,12 @@ rm .ignoretemp
 echo .original >> .gitignore
 git rm --cached -q -r .
 
-#git add .
+#git add dist
 #git commit -m "pushing dist"
 #git push origin master
 
+git status
 
-
+cat .original > .gitignore
+rm .original
+git add .
