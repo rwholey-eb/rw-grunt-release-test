@@ -1,0 +1,26 @@
+{
+  "name": "rw-grunt-release-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rwholey-eb/rw-grunt-release-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rwholey-eb/rw-grunt-release-test/issues"
+  },
+  "homepage": "https://github.com/rwholey-eb/rw-grunt-release-test#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-release": "^0.14.0",
+    "grunt-shell": "^2.0.0",
+    "grunt-tasks": "^1.0.0"
+  }
+}
