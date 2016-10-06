@@ -123,16 +123,18 @@ module.exports = function(grunt) {
     grunt.registerTask('release', function() {
 
         shell.exec('')
-
+        
         var bumpTask = 'bump-version' + Array.prototype.slice.call(arguments).map(function(val) {
             return ':' + val;
         });
+
+        console.log(bumpTask);
 
         grunt.task.run(bumpTask, 'publish');
     });
 
     grunt.registerTask('zip', function() {
         grunt.task.run('compress');
-    })
+    });
 
 };
