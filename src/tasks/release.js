@@ -128,7 +128,7 @@ module.exports = function(grunt) {
             return ':' + val;
         });
 
-        console.log(bumpTask);
+        console.log('>>>>>>>>>>',bumpTask);
 
         grunt.task.run(bumpTask, 'publish');
     });
