@@ -1,1 +1,0 @@
-funtion moooooooooooooop = eys::asdfsadfasdfs
