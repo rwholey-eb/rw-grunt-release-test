@@ -4,7 +4,7 @@ do
   git update-index --no-assume-unchanged $file
 done;
 
-version = cat ./package.json | grep version | awk '{print $2}' | tr -d '\"\,'
+version=cat ./package.json | grep version | awk '{print $2}' | tr -d '\"\,'
 
 git add -f dist
 git commit -m "bumping dist version $version"
