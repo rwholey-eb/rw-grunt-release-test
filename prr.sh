@@ -4,6 +4,7 @@ do
   git update-index --no-assume-unchanged $file
 done;
 
+git rm --cached -q -r dist
 git add -f dist
 
 cat package.json | grep version | awk '{print $2}' | tr -d '\"\,' |
