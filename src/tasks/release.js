@@ -98,8 +98,11 @@ module.exports = function(grunt) {
                 tagAnnotation: 'Release %s',
                 buildCommand: false
             },
-            dist: {
-                baseDir: 'dist'
+            npm: {
+                publish: false
+            },
+            github : {
+                release: true
             }
         })
 
