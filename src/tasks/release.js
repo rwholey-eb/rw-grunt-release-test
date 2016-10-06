@@ -122,13 +122,13 @@ module.exports = function(grunt) {
 
     grunt.registerTask('release', function() {
 
-        shell.exec(path.resolve(__dirname, './src/tasks/push_dist.sh'));
 
         var bumpTask = 'bump-version' + Array.prototype.slice.call(arguments).map(function(val) {
             return ':' + val;
         });
 
         grunt.task.run(bumpTask, 'publish');
+        shell.exec(path.resolve(__dirname, './push_dist.sh'));
     });
 
     grunt.registerTask('zip', function() {

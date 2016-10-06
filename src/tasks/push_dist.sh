@@ -1,3 +1,4 @@
+echo beginning dist push
 find ./dist -type f |
 while read file;
 do
