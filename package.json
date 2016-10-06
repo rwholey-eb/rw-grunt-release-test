@@ -1,6 +1,6 @@
 {
     "name": "rw-grunt-release-test",
-    "version": null,
+    "version": "1.1.2",
     "description": "",
     "main": "index.js",
     "scripts": {
