@@ -89,6 +89,20 @@ module.exports = function(grunt) {
 
     grunt.registerTask('publish', 'Publish package to reggie', function() {
 
+
+        grunt.config.set('release-it', {
+            options: {
+                pkgFiles: ['package.json'],
+                commitMessage: 'Release %s',
+                tagName: '%s',
+                tagAnnotation: 'Release %s',
+                buildCommand: false
+            },
+            dist: {
+                baseDir: 'dist'
+            }
+        })
+
         // var pkg = grunt.file.readJSON('package.json'),
         //     cmd = './node_modules/reggie/client.js -u ' + pkg.publishConfig.registry + ' publish';
 
