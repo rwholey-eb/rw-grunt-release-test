@@ -13,6 +13,7 @@ module.exports = function(grunt) {
             add: true,
             commit: true,
             tag: true,
+            release: true,
             push: true,
             pushTags: true,
             beforeBump: [],
@@ -122,13 +123,12 @@ module.exports = function(grunt) {
 
     grunt.registerTask('release', function() {
 
-
         var bumpTask = 'bump-version' + Array.prototype.slice.call(arguments).map(function(val) {
             return ':' + val;
         });
 
         grunt.task.run(bumpTask, 'publish', 'bump_dist');
-        
+
     });
 
     grunt.registerTask('bump_dist', function() {
