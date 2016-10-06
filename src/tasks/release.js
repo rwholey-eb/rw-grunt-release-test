@@ -21,41 +21,41 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.config.set('gitadd', {
-        task: {
-            options: {
-                message: 'adding dist..',
-                force: true
-            }
-        },
-        files: {
-            src: [path.resolve(__dirname, './dist')]
-        }
-    });
+    // grunt.config.set('gitadd', {
+    //     task: {
+    //         options: {
+    //             message: 'adding dist..',
+    //             force: true
+    //         }
+    //     },
+    //     files: {
+    //         src: [path.resolve(__dirname, './dist')]
+    //     }
+    // });
 
-    grunt.config.set('gitcommit', {
-        task: {
-            options: {
-                message: 'committing dist..',
-                force: true
-            }
-        },
-        files: {
-            src: [path.resolve(__dirname, './dist')]
-        }
-    });
+    // grunt.config.set('gitcommit', {
+    //     task: {
+    //         options: {
+    //             message: 'committing dist..',
+    //             force: true
+    //         }
+    //     },
+    //     files: {
+    //         src: [path.resolve(__dirname, './dist')]
+    //     }
+    // });
 
-    grunt.config.set('gitpush', {
-        task: {
-            options: {
-                message: 'pushing dist..',
-                force: true
-            },
-        },
-        files: {
-            src: [path.resolve(__dirname, './dist')]
-        }
-    });
+    // grunt.config.set('gitpush', {
+    //     task: {
+    //         options: {
+    //             message: 'pushing dist..',
+    //             force: true
+    //         },
+    //     },
+    //     files: {
+    //         src: [path.resolve(__dirname, './dist')]
+    //     }
+    // });
 
    grunt.config.set('compress', {
       main: {
@@ -77,7 +77,6 @@ module.exports = function(grunt) {
         release: {
            tag_name: grunt.file.readJSON('package.json').version,
            name: grunt.file.readJSON('package.json').version,
-           body: 'dist releaes'
         }
       },
       files: {
@@ -85,27 +84,28 @@ module.exports = function(grunt) {
       }
     });
 
-    grunt.registerTask('moop', ['compress', 'github-release']);
+    // grunt.config.set('release-it', {
+    //     options: {
+    //         pkgFiles: ['package.json'],
+    //         commitMessage: 'Release %s',
+    //         tagName: '%s',
+    //         tagAnnotation: 'Release %s',
+    //         buildCommand: false
+    //     },
+    //     npm: {
+    //         publish: false
+    //     },
+    //     github : {
+    //         release: true
+    //     }
+    // })
 
+    grunt.registerTask('moop', ['compress', 'github-release']);
 
     grunt.registerTask('publish', 'Publish package to reggie', function() {
 
 
-        grunt.config.set('release-it', {
-            options: {
-                pkgFiles: ['package.json'],
-                commitMessage: 'Release %s',
-                tagName: '%s',
-                tagAnnotation: 'Release %s',
-                buildCommand: false
-            },
-            npm: {
-                publish: false
-            },
-            github : {
-                release: true
-            }
-        })
+
 
         // var pkg = grunt.file.readJSON('package.json'),
         //     cmd = './node_modules/reggie/client.js -u ' + pkg.publishConfig.registry + ' publish';
@@ -118,6 +118,10 @@ module.exports = function(grunt) {
         //     shell.exec(cmd);
         // }
         // grunt.log.ok('Published to Reggie');
+    });
+
+    grunt.registerTask('boop', 'test', function() {
+        require('./helper.js');
     });
 
 
