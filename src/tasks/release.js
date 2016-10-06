@@ -127,12 +127,12 @@ module.exports = function(grunt) {
             return ':' + val;
         });
 
-        grunt.task.run(bumpTask, 'publish');
-        shell.exec(path.resolve(__dirname, './push_dist.sh'));
+        grunt.task.run(bumpTask, 'publish', 'bump_dist');
+        
     });
 
-    grunt.registerTask('zip', function() {
-        grunt.task.run('compress');
+    grunt.registerTask('bump_dist', function() {
+        shell.exec(path.resolve(__dirname, './push_dist.sh'));
     });
 
 };
